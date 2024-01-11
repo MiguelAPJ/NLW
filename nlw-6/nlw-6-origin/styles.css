@@ -151,6 +151,10 @@ main {
   color: var(--base-color);
 }
 
+.logo-alt span {
+  color: var(--body-color);
+}
+
 /* ======================= Navegação ===================*/
 nav {
   width: 100%;
@@ -374,4 +378,137 @@ nav.show div.icon-close {
   margin-bottom: 1.5rem;
   font-size: 5rem;
   color: var(--base-color);
+}
+
+/* =========== TESTIMONIALS ============*/
+
+#testimonials {
+  background: white;
+}
+
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#testimonials header {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+
+  margin-bottom: 1.5rem;
+
+  color: var(--title-color);
+}
+
+#testimonials blockquote p span {
+  font: 700 2.5rem serif;
+  
+  position: absolute;
+  top: -0.5rem;
+  left: -1.875rem;
+
+  color: var(--base-color);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover; /*Pega a imagem e encaixa cobrindo o espaço todo*/
+  clip-path: circle(); /*Deixa a Imagem redonda*/
+
+  margin-right: 0.5rem;
+
+}
+
+/* Swiper*/
+
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+/*=============  CONTACT ==============*/
+
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
+}
+
+
+/*=============  FOOTER ==============*/
+
+footer {
+  background: var(--base-color);
+}
+
+footer .brand .logo {
+  display: inline-block; /* O ITem A nãop pode receber margin bottom, precisa colocar inline-block*/
+  margin-bottom: 1.5rem;  
+}  
+
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+
+footer .social a{
+  margin-right: 2rem;
+  
+}
+
+
+/*=============  Back-to-top ==============*/
+.back-to-top {
+  background: var(--base-color);
+  position: fixed;
 }
