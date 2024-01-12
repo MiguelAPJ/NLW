@@ -17,16 +17,16 @@ for (const link of links) {
 }
 
 // mudar o header da pagina quando der sroll
-const header = document.querySelector('header')
-const navHeight = header.offsetHeight
+function changerHeaderWhenScroll() {
+  const header = document.querySelector('header')
+  const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function () {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 // Testimonials carousel slider
 
@@ -53,10 +53,24 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links
-  
-  
-  
+  #contact .text, #contact .links,
+  footer .brand, footer .social    
   `,
   { interval: 100 }
 )
+
+// Back-to-top
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+  if (window.scrollY >= 800) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+// when Scroll
+window.addEventListener('scroll', function () {
+  changerHeaderWhenScroll()
+  backToTop()
+})
