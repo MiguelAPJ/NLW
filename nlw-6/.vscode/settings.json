@@ -1,0 +1,11 @@
+{
+  "editor.fontSize": 13,
+  "editor.rulers": [100, 120],
+  "workbench.startupEditor": "newUntitledFile", //Tira a tela de apresentação do VS
+  "editor.fontLigatures": true, // uni os simbolos
+  "explorer.compactFolders": false, // organiza as pasta para não deixar na mesma linha
+  "editor.minimap.enabled": true
+
+  
+}
+
