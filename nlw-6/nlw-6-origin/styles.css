@@ -180,8 +180,10 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--base-color);
+  -webkit-font-smoothing: auto;
 }
 
 /* Fazer o traço em baixo do menu*/
@@ -198,8 +200,9 @@ nav ul li a::after {
   transition: width 0.2s;
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;  
 }
 
 
@@ -554,12 +557,32 @@ footer .social a:hover{
 
 
 @media (min-width:1200px) {
+
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   main {
     margin-top: var(--header-height);
   }
 
+  .button {
+    height: 3.125rem;
+  }
+
+  /*===== NAV =============*/
   .section {
     padding: 10rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   nav .menu {
@@ -574,8 +597,14 @@ footer .social a:hover{
   }
 
   nav .menu ul li a.title {
-    font: 400 1rem var(--body-font);    
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;    
   }
+
+  nav .menu ul li a.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;   
+  } 
 
   nav .icon-menu {
     display: none;
@@ -586,6 +615,9 @@ footer .social a:hover{
   #home .container {
     grid-auto-flow: column;
     
+    justify-content: space-between;
+    margin: 0 auto;
+    
   }
 
   #home .image {
@@ -594,7 +626,61 @@ footer .social a:hover{
 
   #home .text{
     order: 0;
+    max-width: 24rem;
+    text-align: left;
   }
+
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+    
+  }
+
+  /*====== SErvices ====*/
+
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  
+
+  /*===== testimonials ======*/
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*=== Contact ======*/
+  #contact .container {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* ===== footer ====*/
+
+  footer.section {
+    padding: 3.75rem 0 ;
+  }
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+
+
+
 
 }
 
