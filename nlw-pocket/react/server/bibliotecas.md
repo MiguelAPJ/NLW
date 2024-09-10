@@ -6,3 +6,4 @@ Bibliotecas
 - zod = validação
 - postgre
 - paralleldrive/cuid2 = geração de id aleatorio
+- dayjs= biblioteca de datas

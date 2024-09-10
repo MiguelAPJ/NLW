@@ -15,6 +15,13 @@
       "when": 1725978589870,
       "tag": "0001_superb_captain_britain",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1725980587227,
+      "tag": "0002_lush_bloodstrike",
+      "breakpoints": true
     }
   ]
 }
