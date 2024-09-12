@@ -7,3 +7,4 @@ Bibliotecas
 - postgre
 - paralleldrive/cuid2 = geração de id aleatorio
 - dayjs= biblioteca de datas
+- fastify-type-provider-zod
