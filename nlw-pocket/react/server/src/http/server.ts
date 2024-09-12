@@ -3,11 +3,18 @@ import { serializerCompiler, validatorCompiler, type ZodTypeProvider } from "fas
 import { createGoal } from "../functions/create-goal"
 import z from "zod"
 import { title } from "process"
+import { getWeekPendingGoals } from "../functions/get-week-pending-goals";
+
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
+
+app.get('/pending-goals', async () => {
+  const  sql = await getWeekPendingGoals()
+  return sql 
+})
 
 app.post('/goals', {
     schema: {
